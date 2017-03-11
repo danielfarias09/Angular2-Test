@@ -9,11 +9,11 @@ import { MenuComponent } from './menu/menu.component';
 import { WeatherComponent } from './weather/weather.component';
 import { CurrencyComponent } from './currency/currency.component';
 import { MovieComponent } from './movie/movie.component';
+import { CepComponent } from './cep/cep.component';
 import { CONST_ROUTING } from './app.routing';
 import { SharedService } from './shared.service';
 
 import 'hammerjs';
-import { DialogComponent } from './movie/dialog/dialog.component';
 
 
 @NgModule({
@@ -23,7 +23,7 @@ import { DialogComponent } from './movie/dialog/dialog.component';
     WeatherComponent,
     CurrencyComponent,
     MovieComponent,
-    DialogComponent
+    CepComponent,
   ],
   imports: [
     BrowserModule,

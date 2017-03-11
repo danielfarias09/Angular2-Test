@@ -11,6 +11,8 @@ export class SharedService {
   findMovieURL1 = "http://www.omdbapi.com/?t=";
   findMovieURL2 = "&y=&plot=short&r=json";
   currencyURL = "http://api.fixer.io/latest?symbols=";
+  cepURL1 = "http://viacep.com.br/ws/";
+  cepURL2 = "/json/";
   totReqsMade: number = 0;
 
   constructor(private http: Http) { }
@@ -38,6 +40,15 @@ export class SharedService {
         { return response.json() };
       })
       .catch(error => Observable.throw(error.json()));
+  }
+
+  getAddressByCep(cep) {
+    this.totReqsMade = this.totReqsMade + 1;
+
+    return this.http.get(this.cepURL1 + cep + this.cepURL2)
+      .map(respose => {
+      { return respose.json() };
+      }).catch(error => Observable.throw(error.json()));
   }
 
 }

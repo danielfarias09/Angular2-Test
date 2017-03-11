@@ -40,10 +40,6 @@ export class MovieComponent implements OnInit {
       );
   }
 
-  openDialog(){
-
-  }
-
 }
 
 
