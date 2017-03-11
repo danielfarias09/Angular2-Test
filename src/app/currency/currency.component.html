@@ -1,0 +1,15 @@
+<h2>Taxa de Câmbio Atual</h2>
+<div class="col-md-8 col-md-offset-2">
+    <div class="form-group">
+        <md-input-container>
+            <input mdInput type="text" [(ngModel)]="id_currency" (change)="callCurrencyService()" class="form-control" placeholder="Insira o símbolo da moeda.">
+        </md-input-container>
+        <br><br>
+        <h3>Detalhes da Taxa</h3>
+        <br>
+        <p class="well lead">Taxa de câmbio relativa ao Euro no formato JSON: : {{ this.my_result }} </p>
+        <p class="text-info">Total de requisições de todos os serviços :
+            <span class="badge">{{this._sharedService.totReqsMade}}</span>
+        </p>
+    </div>
+</div>

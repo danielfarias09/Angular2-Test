@@ -1,0 +1,23 @@
+<h2>Yahoo! Clima </h2>
+<div class="col-md-8 col-md-offset-2">
+    <div class="form-group">
+        <md-input-container>
+            <input mdInput type="text" [(ngModel)]="id_city" class="form-control" placeholder="Nome da cidade">
+        </md-input-container>
+        <br>
+        <md-input-container>
+            <input mdInput type="text" [(ngModel)]="id_state" class="form-control" placeholder="Estado">
+        </md-input-container>
+        <br>
+        <button md-raised-button color="primary" (click)="callWeatherService()">Pesquisar</button>
+        <br><br><br>
+        <p class="well lead">
+            <b>City, State, Country :</b> {{ this.op_city }} {{ this.op_region }} {{ this.op_country }} <br>
+            <b>Current Condition :</b> {{ this.op_text }} <br>
+            <b>Current Temperature :</b> {{ this.op_temp }} <br>
+        </p>
+        <p class="text-info">Total de requisições de todos os serviços :
+            <span class="badge">{{this._sharedService.totReqsMade}}</span>
+        </p>
+    </div>
+</div>

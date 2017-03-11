@@ -1,0 +1,16 @@
+<md-card class="movie-card">
+    <md-card-header>
+        <div md-card-avatar></div>
+        <md-card-title> {{ this.mv_Title }} </md-card-title>
+        <md-card-subtitle> Lançado em {{ this.mv_Released }}</md-card-subtitle>
+    </md-card-header>
+    <img [src]=this.mv_Poster />
+    <md-card-content>
+        <p class="well lead">
+            <b> Sinopse :</b> {{ this.mv_Plot }} <br>
+            <b> Elenco :</b> {{ this.mv_Actors }} <br>
+            <b> Diretor :</b> {{ this.mv_Director }} <br>
+            <b> Avaliação :</b> {{ this.mv_Rated }} <br>
+        </p>
+    </md-card-content>
+</md-card>
